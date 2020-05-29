@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+              integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <!-- Ekko -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+        <!-- CSS Bootstrap -->
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Kaushan+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/baseMedia.css">
+
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+
+    <div class="bars" id="nav-action">
+        <span class="bar"> </span>
+    </div>
+
+    <img src="img/LogoSitePro.png" alt="monlogo" class="logoSite" onclick="toggleNav()">
+    <!--Navbar Links-->
+    <nav id="nav">
+        <ul>
+            <li class="shape-circle circle-one"><a href="#">Contact</a></li>
+            <li class="shape-circle circle-two"><a href="#">Projets</a></li>
+            <li class="shape-circle circle-three"><a href="#">Qui suis-je?</a></li>
+            <li class="shape-circle circle-five">
+                <a href="#">Accueil</a>
+            </li>
+        </ul>
+    </nav>
+
+        {% block body %}{% endblock %}
+
+
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+        <script src="js/app.js"></script>
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
